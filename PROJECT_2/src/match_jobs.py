@@ -18,7 +18,6 @@ resume_tfidf = scipy.sparse.load_npz(RESUME_TFIDF)
 job_tfidf = scipy.sparse.load_npz(JOB_TFIDF)
 
 print("Computing cosine similarity (this may take a few minutes)...")
-# Use dot product because both are L2-normalized by TF-IDF
 similarity_matrix = cosine_similarity(resume_tfidf, job_tfidf)
 
 print("Finding top 3 job matches for each resume...")
@@ -42,3 +41,4 @@ matches_df.to_csv(OUTPUT_MATCHES, index=False, encoding='utf-8')
 
 print(f"✅ Matching complete. Results saved to: {OUTPUT_MATCHES}")
 print("Each resume now has its top 3 most similar job postings.")
+
