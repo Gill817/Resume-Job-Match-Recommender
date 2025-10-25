@@ -112,37 +112,27 @@ PROJECT\_2/
 
 ├─ app.py        # Streamlit dashboard
 
-└─ README.md
-
 
 
 🛠️ Tech Stack
 
-
-
 Python (pandas, scikit-learn, BeautifulSoup, spacy)
-
-
-
 NLP (TF-IDF vectorization, text cleaning, cosine similarity)
-
-
-
 Streamlit (interactive dashboard)
 
 
 
 🚀 Quick Start
 
-\# Install dependencies
+Install dependencies
 
 pip install pandas scikit-learn spacy beautifulsoup4 streamlit
 
 
 
-\# Run the dashboard
+Run the dashboard
 
-streamlit run app.py
+streamlit run APP.py
 
 
 
