@@ -1,4 +1,4 @@
-# src/extract_text.py
+
 import os
 from pathlib import Path
 import PyPDF2
@@ -65,3 +65,4 @@ if __name__ == "__main__":
     input_dir = sys.argv[1]  # e.g. data/resumes_raw
     output_csv = sys.argv[2] # e.g. data/resumes_extracted.csv
     batch_extract(input_dir, output_csv)
+
