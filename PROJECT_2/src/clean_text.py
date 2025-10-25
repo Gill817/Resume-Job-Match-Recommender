@@ -2,13 +2,13 @@ import re
 import spacy
 from bs4 import BeautifulSoup
 
-# Load small English model
+# loading an english model here
 nlp = spacy.load("en_core_web_sm", disable=["parser","ner"])
 
 def strip_html(text):
     return BeautifulSoup(text, "html.parser").get_text(separator=" ")
 
-RE_NON_ALPHANUM = re.compile(r'[^A-Za-z0-9\s\+\#\.\-]')  # allow plus/hash for C++/C#
+RE_NON_ALPHANUM = re.compile(r'[^A-Za-z0-9\s\+\#\.\-]')  
 RE_MULTISPACE = re.compile(r'\s+')
 
 def clean_text_basic(text):
@@ -36,3 +36,4 @@ def clean_text_spacy(text, lemmatize=True, remove_stopwords=True):
         if tok:
             tokens.append(tok)
     return " ".join(tokens)
+
