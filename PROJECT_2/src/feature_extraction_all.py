@@ -1,4 +1,4 @@
-# src/feature_extraction_all.py
+
 import os
 import pandas as pd
 import scipy.sparse
@@ -18,13 +18,13 @@ resumes_df = pd.read_csv(RESUMES_CSV, low_memory=False)
 jobs_df = pd.read_csv(JOBS_CSV, low_memory=False)
 print(f"Resumes: {resumes_df.shape}, Jobs: {jobs_df.shape}")
 
-# Ensure columns exist
+# checking whether columns exist or not 
 if 'Resume_clean' not in resumes_df.columns:
     raise SystemExit("ERROR: 'Resume_clean' not in resumes_cleaned.csv")
 if 'description_clean' not in jobs_df.columns:
     raise SystemExit("ERROR: 'description_clean' not in postings_cleaned.csv")
 
-# Fill NaNs (this is the fix)
+# Filling Nans
 resumes_texts = resumes_df['Resume_clean'].fillna("").astype(str)
 jobs_texts = jobs_df['description_clean'].fillna("").astype(str)
 
@@ -60,3 +60,4 @@ print("All done. You now have:")
 print(" -", OUT_RESUMES_TFIDF)
 print(" -", OUT_JOBS_TFIDF)
 print(" -", OUT_TFIDF_VECT)
+
