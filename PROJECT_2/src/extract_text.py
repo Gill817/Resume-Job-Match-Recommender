@@ -62,7 +62,8 @@ def batch_extract(input_dir, output_csv):
 
 if __name__ == "__main__":
     import sys
-    input_dir = sys.argv[1]  # e.g. data/resumes_raw
-    output_csv = sys.argv[2] # e.g. data/resumes_extracted.csv
+    input_dir = sys.argv[1]  
+    output_csv = sys.argv[2]
     batch_extract(input_dir, output_csv)
+
 
