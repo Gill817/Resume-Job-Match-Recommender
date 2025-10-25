@@ -130,9 +130,16 @@ pip install pandas scikit-learn spacy beautifulsoup4 streamlit
 
 
 
+
 Run the dashboard
 
 streamlit run APP.py
+
+
+Here is the preview:
+
+<img width="1003" height="637" alt="Screenshot (130)" src="https://github.com/user-attachments/assets/77e76ed9-f0b1-4ed8-9a7d-0715029743d3" />
+
 
 
 
