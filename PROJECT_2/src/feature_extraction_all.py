@@ -44,7 +44,6 @@ print("Transforming jobs (this may take a little while)...")
 job_tfidf = tfidf.transform(jobs_texts)
 print("Job TF-IDF shape:", job_tfidf.shape)
 
-# Make sure output folder exists
 os.makedirs(DATA_FOLDER, exist_ok=True)
 
 print(f"Saving resume TF-IDF to {OUT_RESUMES_TFIDF} ...")
@@ -60,4 +59,5 @@ print("All done. You now have:")
 print(" -", OUT_RESUMES_TFIDF)
 print(" -", OUT_JOBS_TFIDF)
 print(" -", OUT_TFIDF_VECT)
+
 
